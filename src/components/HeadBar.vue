@@ -32,7 +32,7 @@
     </v-container>
     </v-navigation-drawer>
 
-    <v-app-bar class = "bar" short = true app color = "primary" clipped-left>
+    <v-app-bar class = "bar" app color = "primary" clipped-left>
         <v-app-bar-nav-icon @click="drawer=!drawer" ></v-app-bar-nav-icon>
         <v-toolbar-title    >
         Teru's Portfolio

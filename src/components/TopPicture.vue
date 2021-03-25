@@ -1,11 +1,12 @@
 <template>
-    <v-row class="text-center">
-        <v-img
+    <v-row justify="center">
+        <v-col md="8">
+        <v-img 
           :src="require('../assets/top_pic.png')"
-          class="my-3"
           contain
-          height="300"
+          
         />
+        </v-col>
     </v-row>
 </template>
 
