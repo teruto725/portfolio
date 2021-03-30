@@ -1,15 +1,25 @@
 <template>
-    <v-col md=4>
-        <v-card class = "picture-card" height="400" width="300">
-        <v-img
-            height="300"
-            width="300"
-            :src=getSrc
-            >
-        </v-img>
-        <v-card-text v-html=getText> </v-card-text>
-        {{getSrc}}
-        </v-card>
+    <v-col md="auto">
+        <v-hover v-slot:default="{ hover }"><!-- hover で浮き上がる -->
+            <v-card 
+                class = "picture-card" 
+                height="400" 
+                width="300"
+                :elevation="hover ? 12 : 3" 
+                color = "secondary"
+                v-bind:href = "getHref" 
+                >
+                <v-img
+                    height="300"
+                    width="300"
+                    v-bind:src="getSrc"
+                    class="white--text align-end"
+                    >
+                <v-card-title class="font-weight-black "> {{getTitle}} </v-card-title>
+                </v-img>
+                <v-card-text v-html=getText> </v-card-text>
+            </v-card>
+        </v-hover>
     </v-col>
 </template>
 
@@ -22,14 +32,21 @@
         },
         text:{
             type: String
+        },
+        href:{
+            type: String
+        },
+        title:{
+            type: String
         }
     },
     data(){
         return {
-            getSrc : this.src,
-            getText : this.text
+            getSrc: this.src,
+            getText: this.text,
+            getHref: this.href,
+            getTitle: this.title
         }
     }
-
   }
 </script>

@@ -9,7 +9,7 @@ export default new Vuetify({
         light: {
           primary: "#BEA28C",
           secondary: "#E8B499",
-          accent: "#95CBCC",
+          thirdary:"#95CBCC",
           error: "#ffeb3b",
           warning: "#ffc107",
           info: "#ff5722",
@@ -19,6 +19,7 @@ export default new Vuetify({
           facebook: '#3B5998',
           twitter: '#1DA1F2',
           qiita: '#4cb10d',
+          
         },
       },
     },
