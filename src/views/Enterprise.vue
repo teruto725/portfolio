@@ -1,5 +1,5 @@
 <template>
   <div>
-    <h1>Vuetify for enterprise</h1>
+    <h1>実装中...</h1>
   </div>
 </template>

@@ -15,7 +15,7 @@
                     v-bind:src="getSrc"
                     class="white--text align-end"
                     >
-                <v-card-title class="font-weight-black "> {{getTitle}} </v-card-title>
+                <v-card-title class="font-weight-black thirdary--text"> {{getTitle}} </v-card-title>
                 </v-img>
                 <v-card-text v-html=getText> </v-card-text>
             </v-card>
