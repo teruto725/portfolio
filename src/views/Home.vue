@@ -158,5 +158,9 @@ export default {// 外部からも参照できるようにする
 </script>
 
 
-<style>
+<style lang="scss" scoped>
+.content-area {
+  margin: 10px;
+  padding: 10px;
+}
 </style>

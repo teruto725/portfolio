@@ -27,9 +27,7 @@
         text ="MS Teams上で動く単語帳bot<br>Azureで画像認識とかもしてくれる<br>ふざけた機能もいっぱいつけた"
       >
       </picture-card>
-    </v-row>
-    <v-row class = "content-area" justify="center">
-      <picture-card 
+            <picture-card 
         href ="https://terublog.hatenablog.com/entry/2019/04/16/160412"
         :src ="require('@/assets/wordbook.png')"
         title = "ブラウザ英単語帳"
@@ -48,10 +46,8 @@
         :src ="require('@/assets/hoper.png')"
         title = "Hopers"
         text ="友達に頼まれて無料で作ったLP<br>結局チーム解散しちゃったらしくて悲しい..."
-        >
-      </picture-card>
-    </v-row>
-    <v-row class = "content-area" justify="center">
+        > 
+      </picture-card> 
       <picture-card 
         href ="https://github.com/teruto725/python-online-game"
         :src ="require('@/assets/geschenkt-top.jpeg')"
@@ -73,12 +69,11 @@
         text ="TOEICの写真を撮ったら中の英単語抜き出してくれたりその他便利な機能いっぱい!<br>Azureの精度がもうちょっと良ければ..."
         >
       </picture-card>
-
     </v-row>
-        <v-row>
-    <v-col>
-      <v-spacer></v-spacer>
-    </v-col>
+    <v-row>
+      <v-col>
+        <v-spacer></v-spacer>
+      </v-col>
     </v-row>
   </div>
 </template>
@@ -99,3 +94,10 @@ export default {// 外部からも参照できるようにする
 
 
 </script>
+
+<style lang="scss" scoped>
+.content-area {
+  margin: 10px;
+  padding: 10px;
+}
+</style>

@@ -1,4 +1,5 @@
 <template>
+
     <v-col md="auto">
         <v-hover v-slot:default="{ hover }"><!-- hover で浮き上がる -->
             <v-card 
@@ -50,3 +51,13 @@
     }
   }
 </script>
+<style>
+
+.title-text{
+  font-size: xx-large; 
+  text-align:center;
+  margin: 5% auto 5%;
+  border-bottom: solid 3px black;
+}
+
+</style>
