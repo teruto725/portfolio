@@ -4,10 +4,9 @@
       <v-col cols="10">
           <v-row >
               <div class="title-text">
-                  I'm using these programming languages.
+                  I use these programming languages.
               </div>
           </v-row>
-
       </v-col>
     </v-row>
 
