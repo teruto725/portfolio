@@ -23,23 +23,43 @@
         >
       </skill-card>
     </v-row>
+
+
     <v-row justify=center>
       <v-col cols="10">
-          <v-row>
-              <div class="title-text">
-                  My strength is Practical ML skill.
-              </div>
-          </v-row>
+        <v-row>
+            <div class="title-text">
+                My strength is Practical ML skill.
+            </div>
+        </v-row>
+        <v-row justify=center>
+          <dialog-button
+            v-for="(mlbutton) in mlbuttons"
+            :key="mlbutton.title"
+            :title="mlbutton.title"
+            :text="mlbutton.text"
+          >
+          </dialog-button>
+        </v-row>
       </v-col>
     </v-row>
+
+
+
+
   </div>
 </template>
-<script>
 
+
+
+
+<script>
 import SkillCard from '@/components/SkillCard'
+import DialogButton from '@/components/DialogButton'
   export default {
     components: { // キャメルケースでもいいらしい
       "skill-card":SkillCard,
+      "dialog-button":DialogButton,
     },
     data () {
       return {
@@ -75,6 +95,20 @@ import SkillCard from '@/components/SkillCard'
             stars: 2,
             text: 'Railsを使う際に使用する。体系的に一回勉強すれば一週間程度で使えるようになる。'
           },
+        ],
+        mlbuttons : [
+          {
+            title : "Data\n Analyzing",
+            text : "インターンで1年近くMLOps業務を行っています。また研究も高専5年生から3年間以上取り組んでいます。これらの経験からビックデータを与えられたときに、そのデータを整形し、可視化し、読み手に有益な価値提供を高いレベルで行うことが出来ます。"
+          },
+          {
+            title : "Project\nfrom Zero",
+            text : "プログラミングコンテストではブルーオーシャンで勝負することになるため、データセットすらない状態からプロジェクトがスタートします。そんなコンテストをくぐり抜けてきた経験から、ゼロからMLプロジェクトを遂行する力があります。"
+          },
+          {
+            title : "Modeling",
+            text : "機械学習コンペに複数回参加経験があります。コンテストやインターンを通して画像認識、自然言語処理を中心にモデル作成経験が豊富にあります。これらの経験から適切に素早くモデルを作成する事ができます。"
+          }
         ]
       }
     },
@@ -96,5 +130,13 @@ import SkillCard from '@/components/SkillCard'
 .skill-card {
   overflow : hidden;//スライド部分を削除できる
   background-color: transparent;
+}
+.btn-text {
+  font-size : x-large;
+  white-space:pre-wrap; 
+  word-wrap:break-word;
+
+  text-align:center;
+  padding:20px 0;
 }
 </style>
