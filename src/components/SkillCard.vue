@@ -24,6 +24,7 @@
                 width= "150"
                         :src="getSrc"
                         class="white--text ma-2"
+                        contain
                         >
         </v-img>
 

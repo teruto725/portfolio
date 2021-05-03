@@ -29,7 +29,7 @@
     name: 'PicutureCard',
     props:{
         src:{
-            type: Object
+            type: String
         },
         text:{
             type: String

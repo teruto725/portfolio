@@ -44,8 +44,73 @@
       </v-col>
     </v-row>
 
+    <v-row justify=center>
+      <v-col cols="10">
+        <v-row>
+            <div class="title-text">
+                I have knowledge of these ML fields.
+            </div>
+        </v-row>
+        <v-row justify=center>
+          <skill-card v-for="(field) in mlfields"
+            :key="field.title"
+            ref="skillCards"
+            :position="position"
+            :title ="field.title"
+            :src ="require(`@/assets/icons/${field.src}`)"
+            :stars ="field.stars"
+            :text ="field.text"
+            >
+          </skill-card>
+        </v-row>
+      </v-col>
+    </v-row>
 
+    <v-row justify=center>
+      <v-col cols="10">
+        <v-row>
+            <div class="title-text">
+                I have a knowledge of web application too.
+            </div>
+        </v-row>
+        <v-row justify=center>
+          
+          <skill-card v-for="(skill) in skills_web"
+            :key="skill.title"
+            ref="skillCards"
+            :position="position"
+            :title ="skill.title"
+            :src ="require(`@/assets/icons/${skill.src}`)"
+            :stars ="skill.stars"
+            :text ="skill.text"
+            >
+          </skill-card>
+        </v-row>
+      </v-col>
+    </v-row>
 
+    <v-row justify=center>
+      <v-col cols="10">
+        <v-row>
+            <div class="title-text">
+                Other Skills
+            </div>
+        </v-row>
+      <v-row justify=center>
+          
+      <skill-card v-for="(skill) in otherskills"
+            :key="skill.title"
+            ref="skillCards"
+            :position="position"
+            :title ="skill.title"
+            :src ="require(`@/assets/icons/${skill.src}`)"
+            :stars ="skill.stars"
+            :text ="skill.text"
+            >
+          </skill-card>
+        </v-row>
+      </v-col>
+    </v-row>
 
   </div>
 </template>
@@ -96,6 +161,32 @@ import DialogButton from '@/components/DialogButton'
             text: 'Railsを使う際に使用する。体系的に一回勉強すれば一週間程度で使えるようになる。'
           },
         ],
+        skills_web: [
+          {
+            title: 'Flask',
+            src: 'flask.svg',
+            stars: 3,
+            text: '割と頻繁に使う。基礎は復習しながらかける。'
+          },
+          {
+            title: 'Django',
+            src: 'django.svg',
+            stars: 3,
+            text: '何回かコンテストで書いた経験がある。基礎は復習しながらかける。'
+          },
+          {
+            title: 'Vue',
+            src: 'vue.svg',
+            stars: 3,
+            text: '最近勉強中、SPA、コンポーネントあたりは大丈夫。'
+          },
+          {
+            title: 'Ruby on Rails',
+            src: 'rails.svg',
+            stars: 2,
+            text: 'インターンで一時期使用していた言語、だいぶ前なのである程度の復習が必要。'
+          },
+        ],
         mlbuttons : [
           {
             title : "Data\n Analyzing",
@@ -109,7 +200,47 @@ import DialogButton from '@/components/DialogButton'
             title : "Modeling",
             text : "機械学習コンペに複数回参加経験があります。コンテストやインターンを通して画像認識、自然言語処理を中心にモデル作成経験が豊富にあります。これらの経験から適切に素早くモデルを作成する事ができます。"
           }
-        ]
+        ],
+        mlfields : [
+          {
+            title: '自然言語処理',
+            src: 'nlp.svg',
+            stars: 5,
+            text: '研究で使用したためかなり知見がある。前処理からBERTくらいまで使える。'
+          },
+          {
+            title: '画像処理',
+            src: 'cv.svg',
+            stars: 4,
+            text: 'コンテストでガッツリ書いた。OpenCVの基本ができて、CNNを用いた学習ができる。'
+          },
+          {
+            title: '時系列処理',
+            src: 'stock.svg',
+            stars: 4,
+            text: 'インターンのタスクが時系列分析だったので、ノウハウがある。'
+          },
+        ],
+        otherskills :[
+          {
+            title: '競技プログラミング',
+            src: 'atcoder.jpeg',
+            stars: 3,
+            text: 'Rating: 840、 緑　（上位30%くらい)、アルゴリズム問題は大体解けるくらい。'
+          },
+          {
+            title: 'TOEIC',
+            src: 'toeic.jpeg',
+            stars: 3,
+            text: 'L&Rスコア780点、海外短期留学で1ヶ月間シンガポールのNYPに行った。'
+          },
+                    {
+            title: 'オブジェクト指向',
+            src: 'ooj.png',
+            stars: 4,
+            text: '研究で触れてきた。基本的なクラス設計が得意で保守性の高いコードを設計、コーディングできる。'
+          },
+        ],
       }
     },
     mounted() {//dataのつぎ
