@@ -1,27 +1,51 @@
 <template>
+  <v-hover v-slot:default="{ hover }"><!-- hover で浮き上がる -->
+    <v-card 
+      class = "picture-card ma-5" 
+      height="300" 
+      width="300"
+      :elevation="(hover&& href != '') ? 12 : 3" 
+      color = "secondary"
+      :href = "getHref" 
+      >
+      <v-img
+        :height="hover ? 300 : 300"
+        width="300"
+        :src="getSrc"
+        class="white--text align-end"
 
-    <v-col md="auto">
-        <v-hover v-slot:default="{ hover }"><!-- hover で浮き上がる -->
-            <v-card 
-                class = "picture-card" 
-                height="400" 
-                width="300"
-                :elevation="hover ? 12 : 3" 
-                color = "secondary"
-                v-bind:href = "getHref" 
-                >
-                <v-img
-                    height="300"
-                    width="300"
-                    v-bind:src="getSrc"
-                    class="white--text align-end"
-                    >
-                <v-card-title class="font-weight-black thirdary--text"> {{getTitle}} </v-card-title>
-                </v-img>
-                <v-card-text v-html=getText> </v-card-text>
-            </v-card>
-        </v-hover>
-    </v-col>
+        
+
+      >
+        <v-card-title 
+          class="font-weight-black white--text card-title"
+          > 
+          <v-row>
+            <div class="card-title-text">
+            {{getTitle}} 
+            </div>
+            <v-spacer/>
+            <v-icon 
+              class="card-icon"
+              medium
+              color = "white"
+              >
+              {{ hover ? "mdi-arrow-down-bold-box-outline" : "mdi-arrow-up-bold-box-outline"}}
+            </v-icon>
+          </v-row>
+        </v-card-title>
+        <v-expand-transition>
+          <v-card-text 
+            v-html=getText
+            v-if="hover"
+            class = "card-text"
+              > 
+          </v-card-text>
+        </v-expand-transition>
+      </v-img>
+
+    </v-card>
+  </v-hover>
 </template>
 
 <script>
@@ -52,12 +76,16 @@
   }
 </script>
 <style>
-
-.title-text{
-  font-size: xx-large; 
-  text-align:center;
-  margin: 5% auto 5%;
-  border-bottom: solid 3px black;
+.card-title{
+  background-color : #E8B499;
 }
-
+.card-title-text{
+  margin-left : 10px;
+}
+.card-text{
+  background-color : #E8B499;
+}
+.card-icon{
+  float :right;
+}
 </style>

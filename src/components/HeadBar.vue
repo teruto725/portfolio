@@ -31,10 +31,10 @@
             dark
             color = "white"
             >
-        <v-tabs-slider color="yellow"></v-tabs-slider>
+        <v-tabs-slider color="thirdary"></v-tabs-slider>
           <v-tab to="/" >TOP</v-tab>
           <v-tab to = "products">PRODUCTS</v-tab>
-          <v-tab to = "enterprise">Skills</v-tab>
+          <v-tab to = "skills">Skills</v-tab>
         </v-tabs>
       </template>
     </v-app-bar>
