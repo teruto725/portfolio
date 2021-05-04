@@ -13,9 +13,6 @@
         width="300"
         :src="getSrc"
         class="white--text align-end"
-
-        
-
       >
         <v-card-title 
           class="font-weight-black white--text card-title"
@@ -35,12 +32,13 @@
           </v-row>
         </v-card-title>
         <v-expand-transition>
-          <v-card-text 
-            v-html=getText
-            v-if="hover"
-            class = "card-text"
-              > 
-          </v-card-text>
+          <div v-if="hover">
+            <v-card-text 
+              v-html=getText
+              class = "card-text"
+                > 
+            </v-card-text>
+          </div>
         </v-expand-transition>
       </v-img>
 

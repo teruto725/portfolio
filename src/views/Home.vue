@@ -72,6 +72,17 @@
         </picture-card>
       </v-row>
 
+      <bar-title title = "I love making products too."></bar-title>
+      <v-row class = "content-area" justify="center">
+        <picture-card v-for="(card) in card_products"
+          :key="card.title"
+          :src ="require(`@/assets/products/${card.src}`)"
+          :title ="card.title"
+          :href ="card.href"
+          :text="card.text"
+          >
+        </picture-card>
+      </v-row>
 
       <bar-title title = "If you're interested me, check out the other pages!"></bar-title>
       <v-row class = "content-area" justify="center">
@@ -148,6 +159,12 @@ export default {// 外部からも参照できるようにする
           href: "https://terublog.hatenablog.com/entry/2019/04/16/160412",
           text: '高専5年生で作った処女作<br>PHPベタ書きで頑張った！<br>ユーザ100人突破してるのが自慢'
         },
+      ],
+      card_skills : [
+        {
+          
+        },
+
       ]
     }
   },
