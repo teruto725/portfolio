@@ -1,7 +1,6 @@
 <template>
 <v-container fluid> 
       <bar-title title = "Welcome to my portfolio."></bar-title>
-        <top-picture/>
 
       <bar-title title = "My name is Akihito Ihara."></bar-title>
       <v-row class = "content-area" justify="center">
@@ -94,13 +93,13 @@
 
 
 <script>
-import TopPicture from '@/components/TopPicture'
+//import TopPicture from '@/components/TopPicture'
 import BarTitle from '@/components/BarTitle'
 import PictureCard from '@/components/PictureCard'
 export default {// 外部からも参照できるようにする
   name: "App",
   components: { // キャメルケースでもいいらしい
-    "top-picture":TopPicture,
+    //"top-picture":TopPicture,
     "bar-title":BarTitle,
     "picture-card":PictureCard,
   },

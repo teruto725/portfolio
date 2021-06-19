@@ -1,4 +1,5 @@
 <template>
+
   <v-hover v-slot:default="{ hover }"><!-- hover で浮き上がる -->
     <v-card 
       class = "picture-card ma-5" 
