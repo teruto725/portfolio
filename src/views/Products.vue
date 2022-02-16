@@ -40,6 +40,13 @@
       return {
         card_products: [
           {
+            title: 'どこでも麻雀卓',
+            src: 'majan.jpeg',
+            href: 'https://github.com/jphacks/B_2106',
+            text:
+              'JPHacksというコンテストのプロダクト<br>優勝した！！！',
+          },
+          {
             title: 'Codeparty',
             src: 'codeparty.png',
             href: 'https://github.com/teruto725/codeparty-front',

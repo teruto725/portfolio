@@ -4,7 +4,7 @@
   <v-container fluid>
     <v-row justify="center">
       <v-col cols="10">
-        <bar-title title="This is my Experiences."></bar-title>
+        <bar-title title="These are my Experiences."></bar-title>
         <!-- タイムラインコンポーネント -->
         <v-timeline dense>
           <v-timeline-item v-for="year in years" :key="year">
@@ -121,7 +121,7 @@
               url: '',
               icon: 'mdi-briefcase',
               text: 'ダイナミックプライシングテクノロジー',
-              tags: ['長期インターン'],
+              tags: ['エンジニアバイト'],
             },
             {
               url: 'https://terublog.hatenablog.com/entry/2021/02/16/235502',
@@ -134,6 +134,12 @@
               icon: 'mdi-earth',
               text: 'Nanyang Polytechnic',
               tags: ['短期留学'],
+            },
+            {
+              url: '',
+              icon: 'mdi-briefcase',
+              text: '高専キャリア',
+              tags: ['エンジニアバイト'],
             },
             {
               url: '',
@@ -158,13 +164,13 @@
               url: '',
               icon: 'mdi-school',
               text: 'ソフトウェアシンポジウム2021',
-              tags: ['研究'],
+              tags: ['学会'],
             },
             {
               url: '',
               icon: 'mdi-briefcase',
               text: '株式会社カラビナテクノロジー',
-              tags: ['長期インターン'],
+              tags: ['エンジニアバイト'],
             },
             {
               url: '',
@@ -176,43 +182,61 @@
               url: '',
               icon: 'mdi-briefcase',
               text: '株式会社Datafluct',
-              tags: ['長期インターン', '機械学習エンジニア'],
+              tags: ['エンジニアバイト', '機械学習エンジニア'],
             },
             {
               url: '',
               icon: 'mdi-briefcase',
               text: '日本ユニシス株式会社',
-              tags: ['ハッカソン型サマーインターン'],
+              tags: ['短期インターン'],
             },
             {
               url: 'https://terublog.hatenablog.com/entry/2021/09/18/163034',
               icon: 'mdi-briefcase',
               text: 'freee株式会社',
-              tags: ['就業形サマーインターン'],
+              tags: ['長期インターン'],
             },
             {
               url: '',
               icon: 'mdi-briefcase',
               text: '株式会社d-tosh',
-              tags: ['長期インターン', 'フロントエンドエンジニア'],
+              tags: ['エンジニアバイト', 'フロントエンドエンジニア'],
+            },
+              {
+              url: '',
+              icon: 'mdi-school',
+              text: 'SS2021',
+              tags: ['学会'],
+            },
+            {
+              url: 'https://terublog.hatenablog.com/entry/2022/01/01/023841',
+              icon: 'mdi-briefcase',
+              text: 'ヤフー株式会社',
+              tags: ['インターン', 'バックエンドエンジニア'],
+            },
+            {
+              url: '',
+              icon: 'mdi-crown',
+              text: '立命館大学 学生ベンチャーコンテスト',
+              tags: ['ビジコン'],
+            },
+            {
+              url: 'https://terublog.hatenablog.com/entry/2021/12/24/032526',
+              icon: 'mdi-crown',
+              text: 'JPHACKS2021:Best Hack Award受賞',
+              tags: ['ハッカソン'],
+            },
+            {
+              url: '',
+              icon: 'mdi-school',
+              text: 'SIGSS 2022',
+              tags: ['学会'],
             },
             {
               url: '',
               icon: 'mdi-briefcase',
-              text: 'ヤフー株式会社',
-              tags: ['就業形サマーインターン', 'バックエンドエンジニア'],
-            },
-            {
-              url: '',
-              icon: 'mdi-crown',
-              text: '立命館大学　学生ベンチャーコンテスト',
-              tags: ['ビジコン'],
-            },
-            {
-              url: '',
-              icon: 'mdi-crown',
-              text: 'JPHACKS2021',
-              tags: ['ハッカソン'],
+              text: '楽天グループ株式会社',
+              tags: ['長期インターン',"Perlエンジニア"],
             },
           ],
         },
